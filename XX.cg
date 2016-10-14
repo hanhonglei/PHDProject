@@ -1,0 +1,147 @@
+
+void mainF(	in float3 Normal0             : TEXCOORD0,
+			in float3 PositionViewSpace   : TEXCOORD1,
+			float3 LightVec				  : TEXCOORD2,
+			float3 EyeVec				  : TEXCOORD3 ,              
+			out float4 color              : COLOR0)
+{
+	float3 n = normalize(Normal0);
+	float4 diffuse = float4(0.0);
+	float4 specular = float4(0.0);
+	
+	// the material properties are embedded in the shader (for now)
+	float4 mat_ambient = float4(1.0, 1.0, 1.0, 1.0);
+	float4 mat_diffuse = float4(1.0, 1.0, 1.0, 1.0);
+	float4 mat_specular = float4(1.0, 1.0, 1.0, 1.0);
+	
+	float4 lgt_ambient = float4(0.7, 0.7, 0.7, 1.0);
+	float4 lgt_diffuse = float4(0.7, 0.7, 0.7,1.0);
+	float4 lgt_specular = float4(0.5, 0.5, 0.5, 1.0);
+	
+	
+	// ambient term
+	float4 ambient = mat_ambient * lgt_ambient;
+	
+	// diffuse color
+	float4 kd = mat_diffuse * lgt_diffuse;
+	
+	// specular color
+	float4 ks = mat_specular * lgt_specular;
+	
+	// diffuse term
+	float3 lightDir = normalize(LightVec.xyz - PositionViewSpace);
+	float NdotL = dot(n, lightDir);
+	
+	if (NdotL > 0.0)
+		diffuse = kd * NdotL;
+	
+	// specular term
+	float3 rVector = normalize(2.0 * n * dot(n, lightDir) - lightDir);
+	float3 viewVector = normalize(-PositionViewSpace);
+	float RdotV = dot(rVector, viewVector);
+	
+	if (RdotV > 0.0)
+		specular = ks * pow(RdotV, shininess);
+
+	color = ambient + diffuse + specular;
+	
+	
+   // calculate half angle vector
+   float3 halfVec = normalize(LightVec - PositionViewSpace);
+
+   // calculate normal vector     
+   float3 vNormal = normalize(Normal0);
+
+   // calculate diffuse component
+   float diffuse = dot(vNormal, LightVec);
+
+   // calculate specular component
+   float specular = dot(vNormal, halfVec);
+
+   // blue diffuse material
+   float3 diffuseMaterial = float3(0.04, 0.04, 0.04);
+
+   // white specular material
+   float3 specularMaterial = float3(0.1, 0.1, 0.1);
+
+   // Use the lit function to compute lighting vector from diffuse and 
+   // specular values
+   float4 lighting = lit(diffuse, specular, 20);
+
+   // combine diffuse and specular contributions and output final vertex color
+   color.rgb = 0.05 + lighting.y * diffuseMaterial + lighting.z * specularMaterial;
+   color.a = 1.0;
+}
+//
+// Bui Tuong Phong shading model (per-pixel) 
+// 
+// by 
+// Massimiliano Corsini
+// Visual Computing Lab (2006)
+// 
+
+varying vec3 normal;
+varying vec3 vpos;
+
+void main()
+{	
+	// vertex normal
+	normal = normalize(gl_NormalMatrix * gl_Normal);
+	
+	// vertex position
+	vpos = vec3(gl_ModelViewMatrix * gl_Vertex);
+	
+	// vertex position
+	gl_Position = ftransform();
+}
+
+// 
+// Bui Tuong Phong shading model (per-pixel) 
+// 
+// by 
+// Massimiliano Corsini
+// Visual Computing Lab (2006)
+//
+
+varying vec3 normal;
+varying vec3 vpos;
+
+uniform float shininess;
+
+void main()
+{
+	vec3 n = normalize(normal);
+	float4 diffuse = float4(0.0);
+	float4 specular = float4(0.0);
+	
+	// the material properties are embedded in the shader (for now)
+	float4 mat_ambient = float4(1.0, 1.0, 1.0, 1.0);
+	float4 mat_diffuse = float4(1.0, 1.0, 1.0, 1.0);
+	float4 mat_specular = float4(1.0, 1.0, 1.0, 1.0);
+	
+	// ambient term
+	float4 ambient = mat_ambient * gl_LightSource[0].ambient;
+	
+	// diffuse color
+	float4 kd = mat_diffuse * gl_LightSource[0].diffuse;
+	
+	// specular color
+	float4 ks = mat_specular * gl_LightSource[0].specular;
+	
+	// diffuse term
+	vec3 lightDir = normalize(gl_LightSource[0].position.xyz - vpos);
+	float NdotL = dot(n, lightDir);
+	
+	if (NdotL > 0.0)
+		diffuse = kd * NdotL;
+	
+	// specular term
+	vec3 rVector = normalize(2.0 * n * dot(n, lightDir) - lightDir);
+	vec3 viewVector = normalize(-vpos);
+	float RdotV = dot(rVector, viewVector);
+	
+	if (RdotV > 0.0)
+		specular = ks * pow(RdotV, shininess);
+
+	gl_FragColor = ambient + diffuse + specular;
+} 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="MeshSimp">
+</Property><Property Name="Solution File" Value="I:\个人\MeshSimp\MeshSimp.sln">
+</Property><Property Name="Date" Value="2011年7月9日">
+</Property><Property Name="Time" Value="23:51">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="MeshSimp" Source="MeshSimp.vcproj" Description="Converting project file 'I:\个人\MeshSimp\MeshSimp.vcproj'.">
+</Event><Event ErrorLevel="1" Project="MeshSimp" Source="MeshSimp.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="MeshSimp" Source="MeshSimp.vcproj" Description="Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="1" Project="MeshSimp" Source="MeshSimp.vcproj" Description="Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="0" Project="MeshSimp" Source="MeshSimp.vcproj" Description="Done converting to new project file 'I:\个人\MeshSimp\MeshSimp.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="MeshSimp" Source="MeshSimp.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="MeshSimp.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="MeshSimp.sln" Description="Converted">
+</Event></UpgradeLog>

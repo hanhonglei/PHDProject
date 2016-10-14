@@ -1,0 +1,6 @@
+
+void main(float3        normal  :   TEXCOORD0,
+          out float3    color   :   COLOR0)
+{
+    color = normal;
+}

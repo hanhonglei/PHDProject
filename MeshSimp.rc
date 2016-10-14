@@ -1,0 +1,538 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Simplified, PRC) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\MeshSimp.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\MeshSimp.ico"
+IDR_MeshSimpTYPE        ICON                    "res\\MeshSimpDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_APP_ABOUT
+    SEPARATOR
+    BUTTON      ID_PREV_COLL
+    BUTTON      ID_NEXT_COLL
+    SEPARATOR
+    BUTTON      ID_SKEL_COLL
+    SEPARATOR
+    BUTTON      ID_NORMALIZE_SIZE
+    SEPARATOR
+    BUTTON      ID_VIEW_SELECTION
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    MENUITEM SEPARATOR
+    POPUP "Shading"
+    BEGIN
+        MENUITEM "Smooth",                      ID_SHADING_SMOOTH
+        MENUITEM "Wireframe",                   ID_FILL_WIREFRAME
+        MENUITEM "Transparant",                 ID_SHADING_TRANSPARANT
+        MENUITEM "Lighting",                    ID_SHADING_LIGHTING
+        MENUITEM "DrawSphere",                  ID_SHADING_DRAW_VIEW_SPHERE
+        MENUITEM SEPARATOR
+        MENUITEM "DrawMesh",                    ID_SHADING_DRAWMESH
+        MENUITEM "DrawSkeleton",                ID_SHADING_SKELETON
+        MENUITEM SEPARATOR
+        MENUITEM "DrawSegment",                 ID_SHADING_DRAWSEGMENT
+        MENUITEM "DrawSkelMap",                 ID_SHADING_DRAWSKELMAP
+        MENUITEM "DrawCollDist",                ID_SHADING_DRAWCOLLDIST
+        MENUITEM "DrawNormal",                  ID_SHADING_DRAWNORMAL
+        MENUITEM SEPARATOR
+        MENUITEM "ResetView",                   ID_SHADING_RESETVIEW
+        MENUITEM "All6Views",                   ID_SHADING_ALL6VIEWS
+        MENUITEM SEPARATOR
+        MENUITEM "DrawUpright",                 ID_VIEWPOINTSELECTION_UPRIGHTDIR
+        MENUITEM SEPARATOR
+        MENUITEM "OutPutAllCandViews",          ID_SHADING_OUTPUTALLCANDVIEWS
+    END
+    MENUITEM SEPARATOR
+    POPUP "ViewpointSelection"
+    BEGIN
+        MENUITEM "CurvatureEntropy",            ID_VIEWPOINTSELECTION_CE
+        MENUITEM "SaliencyEntropy",             ID_VIEWPOINTSELECTION_SALIENCYENTROPY
+        MENUITEM "MeanCurvature",               ID_VIEWPOINTSELECTION_MEANCURVATURE
+        MENUITEM "MeshSaliency",                ID_EDIT_SALIENCYVS
+        MENUITEM "SemanticDriven",              ID_EDIT_SEMANTICDRIVENVS
+        MENUITEM "OurSaliencySeg",              ID_VIEWPOINTSELECTION_SALIENCYATLAS
+        MENUITEM SEPARATOR
+        MENUITEM "MaxArea",                     ID_VIEWPOINTSELECTION_MINAREA
+        MENUITEM "ViewEntropy",                 ID_VIEWPOINTSELECTION_VIEWENTROPY
+        MENUITEM SEPARATOR
+        MENUITEM "MeanCEntropy",                ID_VIEWPOINTSELECTION_MEANCENTROPY
+        MENUITEM "NBestViewsMCE",               ID_VIEWPOINTSELECTION_NBESTVIEWSMCE
+        MENUITEM SEPARATOR
+        MENUITEM "DistanceRelatedVS",           ID_VIEWSELECTION_VIEWDISTANCESELECTION, INACTIVE
+    END
+    MENUITEM SEPARATOR
+    POPUP "Upright"
+    BEGIN
+        MENUITEM "MaxArea",                     ID_UPRIGHT_MINIAREA
+        MENUITEM "MeanCur",                     ID_UPRIGHT_MEANCUR
+        MENUITEM "CurEntropy",                  ID_UPRIGHT_CURSHANNON
+        MENUITEM "ViewEntropy",                 ID_UPRIGHT_VIEWSHANNON
+        MENUITEM "MeshSaliency",                ID_UPRIGHT_MESHSALIENCY
+        MENUITEM "MCE",                         ID_UPRIGHT_MCS
+        MENUITEM SEPARATOR
+        MENUITEM "UseAllMethod",                ID_UPRIGHT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "BaseCur",                     ID_UPRIGHT_BASECUR
+    END
+    MENUITEM SEPARATOR
+    POPUP "Simplification algorithm", INACTIVE
+    BEGIN
+        MENUITEM "Quadric Weighted by Tri Area", ID_SIMP_QUADRIC_WEIGHTED
+        MENUITEM "Quadric",                     ID_SIMP_QUADRIC
+        MENUITEM "Melax",                       ID_SIMP_MELAX
+        MENUITEM "Shorttest",                   ID_SIMP_SHORTTEST
+        MENUITEM "Quadric Weighted by Segment", ID_SIMPLIFICATIONALGORITHM_QUADRICWEIGHTEDBYSEGMENT
+        MENUITEM "Quadric Weighted by MotionBlur", ID_SIMPLIFICATIONALGORITHM_QUADRICWEIGHTEDBYMOTIONBLUR
+        MENUITEM SEPARATOR
+        MENUITEM "Simp by Distance",            ID_SIMPLIFICATIONALGORITHM_SIMPBYDISTANCE
+        MENUITEM "Simp by MSDM2",               ID_SIMPLIFICATIONALGORITHM_SIMPBYMSDM2
+    END
+    POPUP "Resample"
+    BEGIN
+        MENUITEM "Reduce by 5%",                ID_RESAMPLE_REDUCEBY5
+        MENUITEM "Increase by 5%",              ID_RESAMPLE_INCREASEBY5
+        MENUITEM "Remove 1 Tri",                ID_RESAMPLE_REMOVE1TRI
+        MENUITEM "Add 1 Tri",                   ID_RESAMPLE_ADD1TRI
+        MENUITEM "ReduceByCSF",                 ID_RESAMPLE_REDUCEBYCSF
+        MENUITEM "ReduceUserDef",               ID_RESAMPLE_REDUCEUSERDEF
+    END
+    MENUITEM SEPARATOR
+    POPUP "Skeletonizer", INACTIVE
+    BEGIN
+        MENUITEM "GeometryCollapse",            ID_SKELETONIZER_GETSKELETON
+        MENUITEM SEPARATOR
+        MENUITEM "PrevColl",                    ID_PREV_COLL
+        MENUITEM "NextColl",                    ID_NEXT_COLL
+        MENUITEM SEPARATOR
+        MENUITEM "ConnectivitySurgery",         ID_SKEL_COLL
+    END
+    MENUITEM SEPARATOR
+    POPUP "CalcMeshInfo"
+    BEGIN
+        MENUITEM SEPARATOR
+        MENUITEM "ViewPlaneCurvature",          ID_VIEWSELECTION_VIEWPLANECURVATURE
+        MENUITEM "MeshSaliency",                ID_VIEWSELECTION_MESHSALIENCY
+        MENUITEM "LoadMeshSaliency",            ID_EDIT_SALIENCYVS
+        MENUITEM "MeshCurvature03",             ID_VIEWSELECTION_MESHCURVATURE32857
+        MENUITEM "MeshCurvature04",             ID_VIEWSELECTION_MESHCURVATURE
+        MENUITEM "ViewDMeshCurvature",          ID_VIEWSELECTION_VIEWDMESHCURVATURE
+        MENUITEM SEPARATOR
+        MENUITEM "GetCandViewScores",           ID_VIEWSELECTION_GETCANDVIEWSCORES
+    END
+    POPUP "FilterRadius", INACTIVE
+    BEGIN
+        MENUITEM "1Pixel",                      ID_FILTERRADIUS_1PIXEL
+        MENUITEM "2Pixel",                      ID_FILTERRADIUS_2PIXEL
+        MENUITEM "CSF",                         ID_FILTERRADIUS_CSF
+        MENUITEM "2*CSF",                       ID_FILTERRADIUS_2
+    END
+    MENUITEM SEPARATOR
+    POPUP "Edit"
+    BEGIN
+        MENUITEM "Unselect all",                ID_EDIT_UNSELECTALL
+        MENUITEM "Normalize",                   ID_NORMALIZE_SIZE
+        MENUITEM SEPARATOR
+        MENUITEM "Equalization256",             ID_EDIT_TESTONLY
+        MENUITEM "Equalization32",              ID_EDIT_TESTONLY2
+        MENUITEM "VisibleVertexes",             ID_EDIT_VISIBLEVERTEXES
+        MENUITEM "VisibleFaces",                ID_EDIT_VISIBLEFACES
+        MENUITEM SEPARATOR
+        MENUITEM "CalcSaliency",                ID_EDIT_CALCSALIENCY
+        MENUITEM "SmoothSaliency",              ID_EDIT_SMOOTHSALIENCY
+        MENUITEM "SegBySaliency",               ID_EDIT_SEGBYSALIENCY
+        MENUITEM SEPARATOR
+        MENUITEM "LoadSegSaliency",             ID_EDIT_LOADSEGDATA
+        MENUITEM "Semantic2009",                ID_EDIT_SEMANTIC2009
+    END
+    MENUITEM SEPARATOR
+    POPUP "&Help", INACTIVE
+    BEGIN
+        MENUITEM "&About MeshSimp...",          ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About MeshSimp"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "MeshSimp Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2010",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_DIALOG1 DIALOGEX 0, 0, 317, 184
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,206,163,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,260,163,50,14
+    EDITTEXT        IDC_K,79,72,72,22,ES_AUTOHSCROLL
+    LTEXT           "Sigma",IDC_STATIC,47,53,32,15
+    LTEXT           "min",IDC_STATIC,47,109,32,15
+    LTEXT           "k",IDC_STATIC,47,81,32,15
+    EDITTEXT        IDC_MIN,79,101,72,22,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SIGMA,79,43,72,22,ES_AUTOHSCROLL
+    CONTROL         "Face Primative",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,218,43,64,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "HanHonglei"
+            VALUE "FileDescription", "3D Mesh processing"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "MeshPro.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "MeshPro.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 177
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR_SEL          CURSOR                  "res\\H_CROSS.CUR"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+    ID_MY_STATE             "                                              \t\t\t\t\t"
+    ID_MY_STATE2            "                                             \t\t\t"
+END
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "MeshSimp\n\nMeshSimp\n\n\nMeshSimp.Document\nMeshSimp.Document"
+    ID_MY_STATE3            "                                                                                                  \t\t\t\t\t\t\t"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "MeshPro"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_SKELETON             "Skeletonizer"
+    ID_PRE_COLL             "显示上一层收缩结果"
+    ID_NEXT_COLL            "显示下一层收缩结果"
+    ID_PREV_COLL            "显示上一层收缩结果"
+END
+
+#endif    // Chinese (Simplified, PRC) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\MeshSimp.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

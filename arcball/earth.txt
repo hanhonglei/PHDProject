@@ -1,0 +1,84 @@
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+                           The Earth as an Arcball
+                               Brad Smith 2006
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+ This is a small demonstration I wrote to test my arcball. Ssee the
+ included files arcball.cpp, and arcball.h for relevant source code.
+ For a quick look at the arcball, hit P to pause rotation, then click
+ on a point on the globe; see how you can drag that point to another
+ location on the sphere. That is the nature of arcball rotation, it
+ determines the location of one particular point on the sphere. Please
+ see my website for a thorough description of the arcball.
+
+ Keyboard commands:
+
+   P - Pause rotation.
+   W - Toggle wireframe.
+   L - Toggle lighting.
+   S - Toggle stars.
+   C - Toggle clouds.
+   X - Toggle control style (arcball or trackball)
+ +/- - Zoom in or out.
+ [/] - Adjust rotation speed.
+ {/} - Adjust polygon detail level.
+ (/) - Adjust cloud level.
+ ESC - Quit
+
+ Run with a 256x256 24bit BMP filename as an argument to use a custom texture.
+
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+ This is a demonstration of a few ideas:
+
+ 1. Arcball
+
+    This is easily accomplished by first using gluUnProject to find
+    a ray from the eye to a point under the mouse in the scene, then
+    using the cross product of the starting mouse point and the
+    current mouse position as an axis of rotation, I rotate the
+    earth to keep that point under the mouse. When off the edge of
+    the sphere I instead map that point to the plane that intersects
+    the sphere's visible edge, thus avoiding a swift motion at the
+    edges.
+
+    Alternatively, by pressing X, you may rotate the Earth like
+    a trackball, which is similar to the arcball principle, but
+    instead uses horizontal or vertical axis of rotation. This serves
+    as a very good test of the quaternion calculation's stability,
+    as a trackball's rotation may never be based on single starting
+    vector, but rather must be renewed at every position (trackball
+    motion by its nature does not preserve the location of a
+    point under the mouse).
+
+ 2. Stars at Infinite Distance
+
+    This was accomplished by putting the stars on a sphere centred on
+    the camera, rather than centred on the earth, thus giving them the
+    appearance of infinite distance. (The rendering is done in two
+    passes, one to generate the star background, then the depth
+    buffer is cleared, the projection matrix reset, and the
+    earth is drawn.)
+
+ 3. Perlin Noise
+
+    I used Perlin Noise to form the clouds. This was simple to produce:
+    take a regular field of white noise, and pass a convolution filter
+    over them (e.g. average every pixel with a 10x10 block of its neighbours,
+    which can be done with the row of 10 first, then a column, to save
+    redundant calculation), then add a smaller amount of noise on top of this
+    that has been similarly filtered, but with a less powerful filter.
+    What happens is that the noise has a well behaved harmonic spectrum,
+    giving much power to the large details (cloud shape), while letting
+    the high frequency noises provide smaller details ("texture"). These
+    particular clouds were more low frequency noise in the horizontal
+    direction to make them more horizontally shaped.
+
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+ Questions and comments may be directed to me at: rainwarrior@gmail.com
+
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+ rainwarrior.thenoos.net
+ rainwarrior@gmail.com
+ March 24, 2006

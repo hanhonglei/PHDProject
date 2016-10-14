@@ -1,0 +1,91 @@
+/**************************************************************************
+iceCrackDepth
+	Shader which renders only specular highlighting.
+
+
+	Copyright 2007, Anders Nivfors.
+	
+	Permission is granted to anyone to use this software for any purpose,
+	including commercial applications, and to alter it and redistribute it
+	freely, as long as the above copyright notice and this disclaimer are
+	retained. Furthermore, if you use this software in a product, an
+	acknowledgment in the product documentation would be appreciated but is
+	not required.
+***************************************************************************/
+//---vertex shader---
+void mainV(	in float4 Position            : POSITION,
+			in float4 Normal              : NORMAL,
+			uniform float3 camPos,						//world space camera position
+            uniform float3 lightPos,					//world light camera position
+            out float4 HPosition          : POSITION,
+            out float3 PositionViewSpace  : TEXCOORD1,
+			out float3 LightVec			  : TEXCOORD2,
+			out float3 EyeVec			  : TEXCOORD3 )
+{
+
+
+   
+   // han
+   	float4 pos = mul(glstate.matrix.modelview[0], Position);
+    HPosition = mul(glstate.matrix.mvp, Position);
+    float3 eyeDir = float3(pos);
+   // gl_TexCoord[0] = gl_MultiTexCoord0;
+
+    float3 n = mul(glstate.matrix.invtrans.modelview[0], Normal).xyz;		//normalize(gl_NormalMatrix * gl_Normal);
+    float3 t = normalize(cross(float3(1.141, 2.78, 3.14), n));
+    float3 b = cross(n, t);
+
+    float3 v;
+    v.x = dot(lightPos, t);
+    v.y = dot(lightPos, b);
+    v.z = dot(lightPos, n);
+    LightVec = normalize(v);
+
+    v.x = dot(eyeDir, t);
+    v.y = dot(eyeDir, b);
+    v.z = dot(eyeDir, n);
+    EyeVec = normalize(v);
+}
+
+
+void mainF(	in float3 Normal0             : TEXCOORD0,
+			in float3 PositionViewSpace   : TEXCOORD1,
+			float3 LightVec				  : TEXCOORD2,
+			float3 EyeVec				  : TEXCOORD3 ,              
+			out float4 color              : COLOR0)
+{
+const float3 col = float3(0.7, 0.6, 0.18);
+
+const float Density = 16.0;
+const float Size = 0.25;
+ const float SpecularFactor = 0.5;
+// han
+
+    float3 litColor;
+
+    float2 c = Density * (Normal0.xy);
+    float2 p = fract(c) - float2(0.5);
+    float d = (p.x * p.x) + (p.y * p.y);
+    if (d >= Size)
+        p = float2(0.0);
+
+    float3 normDelta = float3(-p.x, -p.y, 1.0);
+      
+    litColor = col * max(0.0, dot(normDelta, LightVec));
+      
+    float t = 2.0 * dot(LightVec, normDelta);
+    float3 reflectDir = t * normDelta;
+    reflectDir = LightVec - reflectDir;
+    
+//    float3 reflectDir = LightVec - 2.0 * dot(LightVec, normDelta) * normDelta;
+    
+    float spec = max(dot(EyeVec, reflectDir), 0.0);
+    spec = spec * spec;
+    spec = spec * spec;
+    spec *= SpecularFactor;
+
+    litColor = min(litColor + spec, float3(1.0));
+    color = float4(litColor, 1.0);
+//    gl_FragColor = float4(Scale);    
+}
+

@@ -1,0 +1,7 @@
+// just render the result curvature to color buffer
+
+void main(float     curvature   :   TEXCOORD0,
+          out float color       :   COLOR0)
+{
+    color.r = curvature;
+}

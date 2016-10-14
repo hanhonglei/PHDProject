@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="jmspmesh">
+      <UniqueIdentifier>{6e051606-0e2d-4b40-b6a5-4690d6945002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="arcball">
+      <UniqueIdentifier>{391909cb-d68f-4ed1-8249-c23e6d389c89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ViewSelection">
+      <UniqueIdentifier>{5e533092-719f-4ecc-b80b-0d87464a37bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ViewSelection\MS">
+      <UniqueIdentifier>{1b6cd49f-c9c1-4e62-8365-131dc8dfd327}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ViewSelection\com">
+      <UniqueIdentifier>{75c123e4-d867-4e3f-8574-f75cb9cc64e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ViewSelection\OUR">
+      <UniqueIdentifier>{642bc32d-738b-465a-8017-103ce613d316}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MSDM2">
+      <UniqueIdentifier>{92cee5d2-dc7f-44ea-81e3-e10dd64a690f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{b0d6d68e-1cad-411c-a81b-a60ad7130670}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Segment">
+      <UniqueIdentifier>{cebebff1-65ad-4404-a04e-f89eb3048a3c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CSMatrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshSimp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshSimpDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshSimpView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MultigridContractionSolver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Option.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SparseMatrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="jmspmesh\pmesh.cpp">
+      <Filter>jmspmesh</Filter>
+    </ClCompile>
+    <ClCompile Include="jmspmesh\triangle.cpp">
+      <Filter>jmspmesh</Filter>
+    </ClCompile>
+    <ClCompile Include="jmspmesh\vec3.cpp">
+      <Filter>jmspmesh</Filter>
+    </ClCompile>
+    <ClCompile Include="jmspmesh\vertex.cpp">
+      <Filter>jmspmesh</Filter>
+    </ClCompile>
+    <ClCompile Include="arcball\arcball.cpp">
+      <Filter>arcball</Filter>
+    </ClCompile>
+    <ClCompile Include="jmspmesh\Skeletonizer.cpp">
+      <Filter>jmspmesh</Filter>
+    </ClCompile>
+    <ClCompile Include="jmspmesh\MotionBlur.cpp">
+      <Filter>jmspmesh</Filter>
+    </ClCompile>
+    <ClCompile Include="jmspmesh\Matrix.cpp">
+      <Filter>jmspmesh</Filter>
+    </ClCompile>
+    <ClCompile Include="QSlimDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewSelectionBenchmark\Common\com.cpp">
+      <Filter>ViewSelection\com</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewSelectionBenchmark\Common\errorhandle.cpp">
+      <Filter>ViewSelection\com</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewSelectionBenchmark\Common\glmatrix.cpp">
+      <Filter>ViewSelection\com</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewSelectionBenchmark\Common\mesh.cpp">
+      <Filter>ViewSelection\com</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewSelectionBenchmark\Common\render.cpp">
+      <Filter>ViewSelection\com</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewSelectionBenchmark\Common\trackball.cpp">
+      <Filter>ViewSelection\com</Filter>
+    </ClCompile>
+    <ClCompile Include="jmspmesh\jmsmesh.cpp">
+      <Filter>jmspmesh</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewSelectionBenchmark\ViewSelect-MS\myrender-MS.cpp">
+      <Filter>ViewSelection\MS</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewSelectionBenchmark\ViewSelect-OUR\ppm.cpp">
+      <Filter>ViewSelection\OUR</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewSelectionBenchmark\ViewSelect-OUR\myrender-OUR.cpp">
+      <Filter>ViewSelection\OUR</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewSelectionBenchmark\ViewSelect-OUR\volumedata.cpp">
+      <Filter>ViewSelection\OUR</Filter>
+    </ClCompile>
+    <ClCompile Include="MSDM2\MSDM2.cpp">
+      <Filter>MSDM2</Filter>
+    </ClCompile>
+    <ClCompile Include="miniball\Miniball_dynamic_d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shaders\shader.cpp">
+      <Filter>Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Shaders\MATRIX4X4.cpp">
+      <Filter>Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Shaders\VECTOR3D.cpp">
+      <Filter>Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Shaders\VECTOR4D.cpp">
+      <Filter>Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Shaders\COLOR.cpp">
+      <Filter>Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Shaders\PLANE.cpp">
+      <Filter>Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Shaders\VECTOR2D.cpp">
+      <Filter>Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Segment\segment.cpp">
+      <Filter>Segment</Filter>
+    </ClCompile>
+    <ClCompile Include="SegmentParam.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewSelectionDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UprightDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CSMatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshSimp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshSimpDoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshSimpView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MultigridContractionSolver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Option.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SparseMatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="jmspmesh\pmesh.h">
+      <Filter>jmspmesh</Filter>
+    </ClInclude>
+    <ClInclude Include="jmspmesh\resource.h">
+      <Filter>jmspmesh</Filter>
+    </ClInclude>
+    <ClInclude Include="jmspmesh\triangle.h">
+      <Filter>jmspmesh</Filter>
+    </ClInclude>
+    <ClInclude Include="jmspmesh\vec3.h">
+      <Filter>jmspmesh</Filter>
+    </ClInclude>
+    <ClInclude Include="jmspmesh\vertex.h">
+      <Filter>jmspmesh</Filter>
+    </ClInclude>
+    <ClInclude Include="arcball\arcball.h">
+      <Filter>arcball</Filter>
+    </ClInclude>
+    <ClInclude Include="jmspmesh\Matrix.h">
+      <Filter>jmspmesh</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewSelectionBenchmark\Common\bsphere.h">
+      <Filter>ViewSelection\com</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewSelectionBenchmark\Common\Color.h">
+      <Filter>ViewSelection\com</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewSelectionBenchmark\Common\com.h">
+      <Filter>ViewSelection\com</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewSelectionBenchmark\Common\errorhandle.h">
+      <Filter>ViewSelection\com</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewSelectionBenchmark\Common\glmatrix.h">
+      <Filter>ViewSelection\com</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewSelectionBenchmark\Common\lineqn.h">
+      <Filter>ViewSelection\com</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewSelectionBenchmark\Common\mesh.h">
+      <Filter>ViewSelection\com</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewSelectionBenchmark\Common\render.h">
+      <Filter>ViewSelection\com</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewSelectionBenchmark\Common\trackball.h">
+      <Filter>ViewSelection\com</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewSelectionBenchmark\Common\Vec.h">
+      <Filter>ViewSelection\com</Filter>
+    </ClInclude>
+    <ClInclude Include="jmspmesh\jmsmesh.h">
+      <Filter>jmspmesh</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewSelectionBenchmark\ViewSelect-MS\myrender-MS.h">
+      <Filter>ViewSelection\MS</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewSelectionBenchmark\ViewSelect-OUR\ppm.h">
+      <Filter>ViewSelection\OUR</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewSelectionBenchmark\ViewSelect-OUR\myrender-OUR.h">
+      <Filter>ViewSelection\OUR</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewSelectionBenchmark\ViewSelect-OUR\volumedata.h">
+      <Filter>ViewSelection\OUR</Filter>
+    </ClInclude>
+    <ClInclude Include="MSDM2\MSDM2.h">
+      <Filter>MSDM2</Filter>
+    </ClInclude>
+    <ClInclude Include="MiniBall\Miniball_dynamic_d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shaders\shader.h">
+      <Filter>Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Shaders\VECTOR3D.h">
+      <Filter>Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Shaders\VECTOR4D.h">
+      <Filter>Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Shaders\COLOR.h">
+      <Filter>Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Shaders\maths.h">
+      <Filter>Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Shaders\MATRIX4X4.h">
+      <Filter>Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Shaders\PLANE.h">
+      <Filter>Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Shaders\VECTOR2D.h">
+      <Filter>Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Segment\imutil.h">
+      <Filter>Segment</Filter>
+    </ClInclude>
+    <ClInclude Include="Segment\misc.h">
+      <Filter>Segment</Filter>
+    </ClInclude>
+    <ClInclude Include="Segment\pnmfile.h">
+      <Filter>Segment</Filter>
+    </ClInclude>
+    <ClInclude Include="Segment\segment-graph.h">
+      <Filter>Segment</Filter>
+    </ClInclude>
+    <ClInclude Include="Segment\segment-image.h">
+      <Filter>Segment</Filter>
+    </ClInclude>
+    <ClInclude Include="Segment\convolve.h">
+      <Filter>Segment</Filter>
+    </ClInclude>
+    <ClInclude Include="Segment\disjoint-set.h">
+      <Filter>Segment</Filter>
+    </ClInclude>
+    <ClInclude Include="Segment\filter.h">
+      <Filter>Segment</Filter>
+    </ClInclude>
+    <ClInclude Include="Segment\image.h">
+      <Filter>Segment</Filter>
+    </ClInclude>
+    <ClInclude Include="Segment\imconv.h">
+      <Filter>Segment</Filter>
+    </ClInclude>
+    <ClInclude Include="SegmentParam.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\H_CROSS.CUR">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\MeshSimp.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\MeshSimp.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\MeshSimpDoc.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+    <None Include="Shaders\phong.cg">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Segment\README">
+      <Filter>Segment</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MeshSimp.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

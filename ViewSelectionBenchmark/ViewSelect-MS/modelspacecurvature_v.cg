@@ -1,0 +1,33 @@
+void main(
+          float4                position        :   POSITION,
+          float3                normal          :   NORMAL,
+          
+          // texcoord and texture for getting principal curvature and direction
+          int                   texcoord        :   TEXCOORD0,
+          uniform sampler2D     texture_pdircur1,
+          uniform sampler2D     texture_pdircur2,
+          uniform int           texture_width,
+
+          // matrices
+          uniform float4x4      model_view_project,
+          
+          // output to rasterizer
+          out float4            out_position    :   POSITION,
+          out float             out_curvature   :   TEXCOORD0)
+{
+    // get vertex curvature texture coordinates
+    float s = texcoord/texture_width;
+    float r = texcoord - s*texture_width + 0.5;
+    s += 0.5;
+
+    // to 0...1 texture coord
+    r = r/texture_width;
+    s = s/texture_width;
+    float4 p1 = tex2D(texture_pdircur1,float2(r,s));
+    float4 p2 = tex2D(texture_pdircur2,float2(r,s));
+
+    float rc = (p1.w * p2.w)/2;
+
+    out_curvature = rc;
+    out_position = mul(model_view_project, position);
+}
