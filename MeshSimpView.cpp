@@ -4,11 +4,11 @@
 #include "MeshSimpDoc.h"
 #include <gl/GL.h>
 #include <gl/GLU.h>
-#include <gl/glut.h>
 #include "MeshSimp.h"
 
 #include "MeshSimpView.h"
 #include <math.h>
+#include <gl/glut.h>
 
 
 

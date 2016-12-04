@@ -1,7 +1,6 @@
 #include <GL/glew.h>
 #pragma comment(lib,"glew32.lib")
 
-#include <GL/glut.h>
 #pragma comment(lib, "glut32.lib")
 
 #include <ctime>
@@ -14,6 +13,7 @@
 #include <atlstr.h> 
 #include "gfx/gfx.h"
 #include <math.h>
+#include <GL/glut.h>
 
 #pragma warning(disable:4244) //damn stupid warning
 

@@ -17,8 +17,8 @@ using namespace std;
 #include "pmesh.h"
 //#include "..\MainFrm.h"
 #include <float.h>
-#include <gl/glut.h>
 #include <math.h>
+#include <gl/glut.h>
 
 // 用来初始化一些参数信息 [6/21/2011 Han Honglei]
 void PMesh::InitOpt(CSkeOption *opt)

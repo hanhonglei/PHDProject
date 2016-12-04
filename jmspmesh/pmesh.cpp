@@ -31,8 +31,8 @@ using namespace std;
 #include "pmesh.h"
 //#include "..\MainFrm.h"
 #include <float.h>
-#include <gl/glut.h>
 #include <math.h>
+#include <gl/glut.h>
 
 // Used for debugging
 #undef PRINT_DEBUG_INFO

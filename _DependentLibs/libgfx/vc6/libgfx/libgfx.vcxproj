@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <IncludePath>C:\_Hanhonglei\Projects\_MeshProcessing_\MeshDecimation\Qslim\qslim-2.1\tools\qslim;C:\_Hanhonglei\Projects\_MeshProcessing_\MeshDecimation\Qslim\qslim-2.1\mixkit\src;C:\_Hanhonglei\Projects\_MeshProcessing_\MeshDecimation\Qslim\qslim-2.1\win32\QSlim;$(IncludePath);D:\Program Files %28x86%29\NVIDIA Corporation\Cg\include;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include;C:\_Hanhonglei\Projects\include_lib\boost_1_48_0;C:\_Hanhonglei\Projects\include_lib\glew-1.7.0\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include</IncludePath>
+    <LibraryPath>C:\_Hanhonglei\Projects\include_lib\fltk-1.1.10\jpeg;C:\_Hanhonglei\Projects\include_lib\gl;C:\_Hanhonglei\Projects\include_lib\boost_1_48_0\libs;C:\_Hanhonglei\Projects\include_lib\boost_1_48_0\stage\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <IncludePath>$(SolutionDir)\_DependentLibs\fltk-1.1.10;$(SolutionDir)\_DependentLibs\fltk-1.1.10\jpeg;$(SolutionDir)\_DependentLibs\fltk-1.1.10\png;$(SolutionDir)\_DependentLibs\fltk-1.1.10\zlib;$(SolutionDir)\_DependentLibs\libtiff;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\_DependentLibs\fltk-1.1.10\jpeg;$(SolutionDir)\_DependentLibs\gl;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <AdditionalIncludeDirectories>../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Debug\libgfx.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\libgfx.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\libgfx.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\libgfx.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\libgfx.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\libgfx.lib</OutputFile>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\gfx\arcball.h" />
+    <ClInclude Include="..\..\include\gfx\array.h" />
+    <ClInclude Include="..\..\include\gfx\baseball.h" />
+    <ClInclude Include="..\..\include\gfx\config-vc.h" />
+    <ClInclude Include="..\..\include\gfx\geom3d.h" />
+    <ClInclude Include="..\..\include\gfx\gfx.h" />
+    <ClInclude Include="..\..\include\gfx\gl.h" />
+    <ClInclude Include="..\..\include\gfx\gltools.h" />
+    <ClInclude Include="..\..\include\gfx\gui.h" />
+    <ClInclude Include="..\..\include\gfx\intvec.h" />
+    <ClInclude Include="..\..\include\gfx\mat2.h" />
+    <ClInclude Include="..\..\include\gfx\mat3.h" />
+    <ClInclude Include="..\..\include\gfx\mat4.h" />
+    <ClInclude Include="..\..\include\gfx\quat.h" />
+    <ClInclude Include="..\..\include\gfx\raster.h" />
+    <ClInclude Include="..\..\include\gfx\script.h" />
+    <ClInclude Include="..\..\include\gfx\trackball.h" />
+    <ClInclude Include="..\..\include\gfx\vec2.h" />
+    <ClInclude Include="..\..\include\gfx\vec3.h" />
+    <ClInclude Include="..\..\include\gfx\vec4.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\arcball.cxx" />
+    <ClCompile Include="..\..\src\baseball.cxx" />
+    <ClCompile Include="..\..\src\geom3d.cxx" />
+    <ClCompile Include="..\..\src\gltools.cxx" />
+    <ClCompile Include="..\..\src\gui.cxx" />
+    <ClCompile Include="..\..\src\mat2.cxx" />
+    <ClCompile Include="..\..\src\mat3.cxx" />
+    <ClCompile Include="..\..\src\mat4.cxx" />
+    <ClCompile Include="..\..\src\quat.cxx" />
+    <ClCompile Include="..\..\src\raster-jpeg.cxx" />
+    <ClCompile Include="..\..\src\raster-png.cxx" />
+    <ClCompile Include="..\..\src\raster-pnm.cxx" />
+    <ClCompile Include="..\..\src\raster-tiff.cxx" />
+    <ClCompile Include="..\..\src\raster.cxx" />
+    <ClCompile Include="..\..\src\script.cxx" />
+    <ClCompile Include="..\..\src\time.cxx" />
+    <ClCompile Include="..\..\src\trackball.cxx" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
