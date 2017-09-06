@@ -8,4 +8,6 @@ Please check the ReadMe.doc for more details.
 
 My PHD thesis can be found in the root folder named "mythesis.pdf"
 
-This source project is under GNU GENERAL PUBLIC LICENSE, please check it in the root folder.
+----
+
+- This project is under [GNU GENERAL PUBLIC LICENSE](https://www.gnu.org/licenses/), please check it in the root folder.
